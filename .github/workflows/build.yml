@@ -43,5 +43,4 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
         with:
-          name: endstone_my_plugin
           path: dist/*
