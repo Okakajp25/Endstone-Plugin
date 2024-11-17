@@ -9,3 +9,6 @@ description = "My first Python plugin for Endstone servers!"
 
 [project.entry-points."endstone"]
 my-plugin = "endstone_my_plugin:MyPlugin"
+
+[project.urls]
+Homepage = "https://github.com/Okakajp25/endstone-plugin"
