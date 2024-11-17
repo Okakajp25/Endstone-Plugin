@@ -29,7 +29,6 @@ jobs:
       - name: Move file
         run: |
           mv endstone-first-plugin/* ./
-          mv endstone-first-plugin/.* ./
 
       - name: Install
         run: |
