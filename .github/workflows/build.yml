@@ -42,7 +42,6 @@ jobs:
 
       - name: list file
         run: |
-          ls .
           ls dist/
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
