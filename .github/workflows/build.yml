@@ -4,7 +4,9 @@
 name: Build
 
 on:
-  push: [main]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
