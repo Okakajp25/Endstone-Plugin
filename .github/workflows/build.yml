@@ -43,5 +43,4 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
         with:
-          path: ./dist/*
-          name: endsrone_my_plugin-0.1.0-py2.py3-none-any.whl
+          path: ./dist/endsrone_my_plugin-0.1.0-py2.py3-none-any.whl
