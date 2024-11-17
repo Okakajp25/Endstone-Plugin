@@ -44,3 +44,4 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: ./dist/*
+          name: endsrone_my_plugin-0.1.0-py2.py3-none-any.whl
