@@ -30,7 +30,6 @@ jobs:
         run: |
           mv endstone-first-plugin/* ./
           mv endstone-first-plugin/.* ./
-          rm -rf endstone-first-plugin/
 
       - name: Install
         run: |
