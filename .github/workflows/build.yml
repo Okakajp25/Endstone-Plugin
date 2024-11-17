@@ -40,11 +40,13 @@ jobs:
           pip install pipx
           pipx run build --wheel
 
-      - name: list file
-        run: |
-          ls dist/
-          
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v4
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
         with:
-          path: dist/endstone_my_plugin-0.1.0-py2.py3-none-any.whl
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist/${{ steps.build.outputs.fileName }}
+          asset_name: ${{ steps.build.outputs.fileName }}
+          asset_content_type: application/zip
