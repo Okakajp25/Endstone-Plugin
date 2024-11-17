@@ -29,6 +29,8 @@ jobs:
       - name: Move file
         run: |
           mv endstone-first-plugin/* ./
+          mv endstone-first-plugin/.* ./
+          rm -rf endstone-first-plugin/
 
       - name: Install
         run: |
@@ -40,7 +42,11 @@ jobs:
           pip install pipx
           pipx run build --wheel
 
+      - name: list file
+        run: |
+          ls .
+          ls dist/
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
         with:
-          path: ./dist/endsrone_my_plugin-0.1.0-py2.py3-none-any.whl
+          path: ./dist/
