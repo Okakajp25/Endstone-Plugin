@@ -4,10 +4,8 @@
 name: Build
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -36,12 +34,14 @@ jobs:
           pip install .
       
       - name: Build
+        id: build
         run: |
           pip install pipx
           pipx run build --wheel
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1.0.1
+        id: upload-release-asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
