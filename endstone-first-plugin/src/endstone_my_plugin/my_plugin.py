@@ -8,6 +8,6 @@ class MyPlugin(Plugin):
         self.logger.info("on_load")
     def on_player_join(self, event: PlayerJoinEvent):
         player = event.player
-        self.plugin.logger.info(
+        self.logger.info(
             ColorFormat.YELLOW + f"{player.name}/[{player.address}:{player.port}] joined the game with UUID {player.unique_id}"
         )
